@@ -1,0 +1,20 @@
+# Imports go at the top
+from microbit import *
+import radio
+
+radio.on()
+radio.config(group=1)
+turn_angle = 0
+
+def set_servo_angle(pin0, angle):
+    duty = 26 + (angle*102)/100
+    pin0.write_analog(duty)
+
+    
+while True:
+    message = radio.receive()
+    if message is not None:
+        print(message)
+        turn_angle = float(message)
+    set_servo_angle(pin0, turn_angle)
+    sleep(10)
