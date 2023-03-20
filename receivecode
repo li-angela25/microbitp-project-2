@@ -18,3 +18,5 @@ while True:
         turn_angle = float(message)
     set_servo_angle(pin0, turn_angle)
     sleep(10)
+
+# Samuel and Angela did this together in class
