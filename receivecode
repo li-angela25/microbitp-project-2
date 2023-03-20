@@ -3,13 +3,14 @@ from microbit import *
 import radio
 
 radio.on()
-radio.config(group=1)
+radio.config(group=7)
 turn_angle = 0
+#Angela
 
 def set_servo_angle(pin0, angle):
     duty = 26 + (angle*102)/100
     pin0.write_analog(duty)
-
+#Angela
     
 while True:
     message = radio.receive()
@@ -18,5 +19,12 @@ while True:
         turn_angle = float(message)
     set_servo_angle(pin0, turn_angle)
     sleep(10)
+#Angela and Samuel
 
-# Samuel and Angela did this together in class
+#Hardware part: 
+#Idea of how it would work & what it would look like (4-side frame) — Samuel
+#Choosing and putting together together the materials (wood&toothpicks) — Angela
+#Hot gluing - Samuel
+#Trial and error, experimentation — Samuel
+#Paperclip idea - Angela
+#Cardboard boxes - Samuel
