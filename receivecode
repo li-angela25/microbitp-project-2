@@ -19,7 +19,7 @@ while True:
         turn_angle = float(message)
     set_servo_angle(pin0, turn_angle)
     sleep(10)
-#Angela and Samuel
+#Samuel
 
 #Hardware part: 
 #Idea of how it would work & what it would look like (4-side frame) — Samuel
